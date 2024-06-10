@@ -1,0 +1,30 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+ca-certificates
+cudatoolkit=10.1
+cycler
+dataclasses
+decorator
+idna
+imageio
+jpeg
+kiwisolver
+mkl
+networkx
+ninja
+numpy=1.18
+openjpeg
+openssl
+pillow
+scikit-image
+scipy
+setuptools
+simpleitk=2.0
+six
+sqlite=3.37.0=h2bbff1b_0
+tk
+torch=1.7.0+cu101
+xz
+zlib
+zstd
