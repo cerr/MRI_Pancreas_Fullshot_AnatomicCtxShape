@@ -1,13 +1,21 @@
 # MRI_Pancreas_Fullshot_AnatomicCtxShape
-This repository provides pre-trained deep learning models for longitudinal registration and segmentation of organs at risk in radiotherapy treatment planning
-of pancreatic cancer patients. It operates on axial T2w-MRI scans acquired for this purpose in the head-first supine (HFS) orientation.  This model requires
-input segmentations of the structures listed below, associated with the baseleine (earlier) scan.
+This repository provides pre-trained deep learning models for longitudinal registration and segmentation of organs at risk (OARs)
+in radiotherapy treatment planning of pancreatic cancer patients.  
   
-Segmented structures:  
+It operates on axial T2w-MRI scans acquired for this purpose in the head-first supine (HFS) orientation. This model requires
+input segmentations of the OARs on the baseline (earlier) scan.
+  
+## Outputs
+
+### OARs
+
 * Liver  
 * Bowel_lg  
 * Bowel_sm   
 * Duostomach  
+
+### Deformable vector field
+VF for deforming the first (moving) scan to a later (baseline) scan.
   
 ## Installing dependencies  
 Dependencies specified in `requirements.txt` may be installed as follows:  
@@ -24,8 +32,9 @@ python run_inference_first_to_last_nii.py <input_nii_directory> <output_nii_dire
 ```
   
 ## Citing this work
-You may publish material involving results produced using this software provided that you reference the following
-* Jiang, J., Hong, J., Tringale, K., Reyngold, M., Crane, C., Tyagi, N., & Veeraraghavan, H. (2023). Progressively refined deep joint registration segmentation (ProRSeg) of gastrointestinal organs at risk: Application to MRI and cone-beam CT. * Medical Physics*, 50(8), 4758-4774.  
+You may publish material involving results produced using this software provided that you reference the following  
+  
+* Jiang, J., Hong, J., Tringale, K., Reyngold, M., Crane, C., Tyagi, N., & Veeraraghavan, H. (2023). Progressively refined deep joint registration segmentation (ProRSeg) of gastrointestinal organs at risk: Application to MRI and cone-beam CT. *Medical Physics*, 50(8), 4758-4774.  
 * Iyer, A., Locastro, E., Apte, A. P., Veeraraghavan, H., & Deasy, J. O. (2021). Portable framework to deploy deep learning segmentation models for medical images. *bioRxiv*, 2021-03.  
 
 ## License

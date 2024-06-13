@@ -20,6 +20,9 @@ def find(pattern, path):
 
 def write_file(mask,dir_name,file_name,input_img):
     """ Write mask to NIfTI file """
+    if not os.path.exists(dir_name):
+    	os.makedirs(dir_name)	
+
     out_file = os.path.join(dir_name,file_name + '.nii.gz')
     mask = np.flip(mask, 2)
     mask_img = sitk.GetImageFromArray(mask)
