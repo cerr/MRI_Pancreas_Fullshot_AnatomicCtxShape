@@ -3,15 +3,15 @@ This repository provides pre-trained deep learning models for longitudinal regis
 in radiotherapy treatment planning of pancreatic cancer patients.  
   
 It operates on axial T2w-MRI scans acquired for this purpose in the head-first supine (HFS) orientation. This model requires
-input segmentations of the OARs on the baseline (earlier) scan.
+input segmentations of the OARs listed below to be available on the baseline (earlier) scan.
   
 ## Outputs
 
 ### OARs
 
 * Liver  
-* Bowel_lg  
-* Bowel_sm   
+* Bowel_Lg  
+* Bowel_Sm   
 * Duostomach  
 
 ### Deformable vector field
