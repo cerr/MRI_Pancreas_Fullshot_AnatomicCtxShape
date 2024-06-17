@@ -1,9 +1,8 @@
 # MRI_Pancreas_Fullshot_AnatomicCtxShape
-This repository provides pre-trained deep learning models for longitudinal registration and segmentation of organs at risk (OARs)
+This repository provides pre-trained deep learning models [1] for longitudinal registration and segmentation of organs at risk (OARs)
 in radiotherapy treatment planning of pancreatic cancer patients.  
   
-It operates on axial T2w-MRI scans acquired for this purpose in the head-first supine (HFS) orientation. This model requires
-input segmentations of the OARs listed below to be available on the baseline (earlier) scan.
+It operates on axial T2w-MRI scans acquired for this purpose in the head-first supine (HFS) orientation. This model requires the scans to be rigidly registered, and input segmentations of the OARs listed below to be available on the baseline (earlier) scan. Pre-processing including automatic extraction of patient outline and resizing [2] are performed using pyCERR.
   
 ## Outputs
 
@@ -15,7 +14,7 @@ input segmentations of the OARs listed below to be available on the baseline (ea
 * Duostomach  
 
 ### Deformable vector field
-VF for deforming the first (moving) scan to a later (baseline) scan.
+DVF for deforming the earlier (moving) scan to a later (baseline) scan.
   
 ## Installing dependencies  
 Dependencies specified in `requirements.txt` may be installed as follows:  
@@ -34,8 +33,9 @@ python run_inference_first_to_last_nii.py <input_nii_directory> <output_nii_dire
 ## Citing this work
 You may publish material involving results produced using this software provided that you reference the following  
   
-* Jiang, J., Hong, J., Tringale, K., Reyngold, M., Crane, C., Tyagi, N., & Veeraraghavan, H. (2023). Progressively refined deep joint registration segmentation (ProRSeg) of gastrointestinal organs at risk: Application to MRI and cone-beam CT. *Medical Physics*, 50(8), 4758-4774.  
-* Iyer, A., Locastro, E., Apte, A. P., Veeraraghavan, H., & Deasy, J. O. (2021). Portable framework to deploy deep learning segmentation models for medical images. *bioRxiv*, 2021-03.  
+1. Jiang, J., Hong, J., Tringale, K., Reyngold, M., Crane, C., Tyagi, N., & Veeraraghavan, H. (2023). Progressively refined deep joint registration segmentation (ProRSeg) of gastrointestinal organs at risk: Application to MRI and cone-beam CT. *Medical Physics*, 50(8), 4758-4774.  
+  
+2.  Iyer, A., Locastro, E., Apte, A. P., Veeraraghavan, H., & Deasy, J. O. (2021). Portable framework to deploy deep learning segmentation models for medical images. *bioRxiv*, 2021-03.    
 
 ## License
 By downloading the software you are agreeing to the following terms and conditions as well as to the Terms of Use of CERR software.
