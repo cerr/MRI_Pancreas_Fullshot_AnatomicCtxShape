@@ -27,12 +27,14 @@ pip install -r requirements.txt
   
 ## Applying the model  
 ```  
-python run_inference_first_to_last_nii.py <input_nii_directory> <output_nii_directory>  
+python run_inference_first_to_last_nii.py <input_nii_directory> <output_nii_directory>    
 ```
   
-## Citing this work
+A Jupyter [notebook](https://github.com/cerr/pyCERR-Notebooks/blob/main/auto_register_segment_MR_Pancreas_OARs.ipynb) demonstrating how to run the model and visualize auto-segmented structures is provided.
+      
+## Citing this work  
 You may publish material involving results produced using this software provided that you reference the following  
-  
+   
 1. Jiang, J., Hong, J., Tringale, K., Reyngold, M., Crane, C., Tyagi, N., & Veeraraghavan, H. (2023). Progressively refined deep joint registration segmentation (ProRSeg) of gastrointestinal organs at risk: Application to MRI and cone-beam CT. *Medical Physics*, 50(8), 4758-4774.  
   
 2.  Iyer, A., Locastro, E., Apte, A. P., Veeraraghavan, H., & Deasy, J. O. (2021). Portable framework to deploy deep learning segmentation models for medical images. *bioRxiv*, 2021-03.    
